@@ -1,12 +1,13 @@
+require("dotenv").config();
 const mqtt = require("mqtt");
 const { MongoClient } = require("mongodb");
 
 // CONFIGURATION
-const MQTT_BROKER = "mqtt://192.168.5.50:1883";
-const MQTT_TOPIC = "reading";
-const MONGO_URI = "mongodb://192.168.5.50:27017/?directConnection=true";
-const DB_NAME = "IOT";
-const COLLECTION_NAME = "Energy_Monitoring";
+const MQTT_BROKER = process.env.MQTT_BROKER;
+const MQTT_TOPIC = process.env.MQTT_TOPIC;
+const MONGO_URI = process.env.MONGO_URI;
+const DB_NAME = process.env.DB_NAME;
+const COLLECTION_NAME = process.env.COLLECTION_NAME;
 
 // === CONVERT TIMESTAMP TO WIB (UTC+7) ===
 function toWIBDate(ms) {
