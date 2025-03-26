@@ -1,0 +1,38 @@
+# Node.js standard
+backend/node_modules/
+npm-debug.log*
+yarn-debug.log*
+yarn-error.log*
+
+# Local env
+.env
+.env.local
+
+# IDE settings
+.vscode/
+.idea/
+*.sw?
+
+# OS generated
+.DS_Store
+Thumbs.db
+
+# Logs
+logs/
+*.log
+*.out
+*.pid
+
+# Build files or dist output
+dist/
+build/
+coverage/
+
+# PM2 logs & files
+pids/
+*.pid
+*.seed
+*.pid.lock
+
+# Others
+*.tgz
